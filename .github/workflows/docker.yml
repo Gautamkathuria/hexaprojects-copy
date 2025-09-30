@@ -29,11 +29,4 @@ jobs:
       run: docker build -t frontend:latest ./frontend
       working-directory: ${{ github.workspace }}
 
-    - name: Build backend image (user-service)
-      run: docker build -t backend:latest ./user-service
-      working-directory: ${{ github.workspace }}
-
-    - name: Build database image (optional)
-      run: docker build -t database:latest ./database || echo "No Dockerfile for DB"
-      working-directory: ${{ github.workspace }}
 
